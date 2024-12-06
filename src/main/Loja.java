@@ -9,12 +9,12 @@ public class Loja {
 
     // Inicializar todos os Atributos //
 
-    public Loja(String nome, int quantidadedeFuncionarios, double salarioBaseFuncionarios, Endereco endereco, Data dataFundacao, int maxProdutos) {
+    public Loja(String nome, int quantidadedeFuncionarios, double salarioBaseFuncionarios, String endereco2, int dataFundacao2, int maxProdutos) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadedeFuncionarios;
         this.salarioBaseFuncionarios = salarioBaseFuncionarios;
-        this.endereco = endereco;
-        this.dataFundacao = dataFundacao;
+        this.endereco = endereco2;
+        this.dataFundacao = dataFundacao2;
         this.estoqueProdutos = new Produto[maxProdutos];
     }
 

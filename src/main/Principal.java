@@ -55,6 +55,10 @@ public class Principal extends Application {
         qtdFuncionariosField.setPromptText("Quantidade de Funcionários");
         TextField salarioBaseField = new TextField();
         salarioBaseField.setPromptText("Salário Base");
+        TextField enderecoField = new TextField();
+        enderecoField.setPromptText("Endereço da Loja");
+        TextField dataFundacaoField = new TextField();
+        dataFundacaoField.setPromptText("Data de Fundação:");
 
         // Botão para salvar loja
         Button salvarLojaButton = new Button("Salvar Loja");
@@ -62,15 +66,17 @@ public class Principal extends Application {
             String nomeLoja = nomeLojaField.getText();
             int qtdFuncionarios = Integer.parseInt(qtdFuncionariosField.getText());
             double salarioBase = Double.parseDouble(salarioBaseField.getText());
+            String endereco = enderecoField.getText();
+            int dataFundacao = Integer.parseInt(dataFundacaoField.getText());
 
-            Loja loja = new Loja(nomeLoja, qtdFuncionarios, salarioBase, null, null, qtdFuncionarios);
+            Loja loja = new Loja(nomeLoja, qtdFuncionarios, salarioBase, endereco, dataFundacao, qtdFuncionarios);
             lojas.add(loja);
 
             outputArea.appendText("Loja criada: " + nomeLoja + "\n");
             lojaStage.close();
         });
 
-        VBox lojaLayout = new VBox(10, nomeLojaField, qtdFuncionariosField, salarioBaseField, salvarLojaButton);
+        VBox lojaLayout = new VBox(10, nomeLojaField, qtdFuncionariosField, salarioBaseField, enderecoField, dataFundacaoField, salvarLojaButton);
         lojaLayout.setPadding(new Insets(10));
         lojaStage.setScene(new Scene(lojaLayout, 300, 200));
         lojaStage.show();
