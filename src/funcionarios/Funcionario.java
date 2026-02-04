@@ -5,13 +5,16 @@ public class Funcionario {
     private String cargo;
     private double salario;
     private String cpf;
+    private String cnpj;
+    
 
     // Construtor
-    public Funcionario(String nome, String cargo, double salario, String cpf) {
+    public Funcionario(String nome, String cargo, double salario, String cpf, String cnpj) {
         this.nome = nome;
         this.cargo = cargo;
         this.salario = salario;
         this.cpf = cpf;
+        this.cnpj = cnpj;
     }
 
     // Getters e Setters
@@ -47,9 +50,18 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    publicc void setCnpj(String cnpj){
+        this.cnpj = cnpj;
+    }
+
     @Override
 
     public String toString() {
-        return "Nome: " + nome + ", Cargo: " + cargo + ", Salário: R$" + salario + ", CPF: " + cpf;
+        return "Nome: " + nome + ", Cargo: " + cargo + ", Salário: R$" + salario + ", CPF: " + cpf + ", CNPJ: " + cnpj;
     }
 }
+
