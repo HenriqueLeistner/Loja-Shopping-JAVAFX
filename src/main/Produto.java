@@ -2,7 +2,8 @@ public class Produto {
     private String nome;
     private Double preco;
     private Data dataValidade;
-
+    private int quantidade;
+    
     // Inicializar todos os atributos //
 
     public Produto(String nome, double preco, Data dataValidade) {
@@ -37,10 +38,19 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    
     // toString //
 
     public String toString() {
-        return "Produto [Nome: " + nome + ", Preço: R$ " + preco + ", Validade: " + dataValidade + "]";
+        return "Produto [Nome: " + nome + ", Preço: R$ " + preco + ", Validade: " + dataValidade + ",quantidade: " + quantidade" ]";
     }
 
     // Método para verificar se o produto está vencido
@@ -62,3 +72,4 @@ public class Produto {
     }
 
 }
+
